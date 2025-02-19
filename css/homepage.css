@@ -1,0 +1,101 @@
+/* 🟢 Fond animé avec des couleurs changeantes */
+body {
+    font-family: 'Jersey 20', sans-serif;
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    background-size: 400% 400%;
+    animation: bg-animation 8s ease infinite;
+}
+
+/* 🔵 Animation du background */
+@keyframes bg-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 🔶 Navbar verticale fixée à droite */
+nav {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 🔹 Liste en colonne, avec flou */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2); /* Effet semi-transparent */
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Effet de flou */
+    animation: scale-up-ver-bottom 0.5s ease-in-out;
+}
+
+/* Supprimer les puces */
+li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🟣 Cacher le texte par défaut */
+li a {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+/* 🟠 Afficher le texte au hover */
+li:hover a {
+    opacity: 1;
+    max-height: 20px;
+}
+
+/* 🟢 Effet d'agrandissement au hover */
+li:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🟡 Ajuster la taille des icônes */
+img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+/* ----------------------------------------------
+ * 🎭 Animation CSS Animista : Apparition fluide
+ * ---------------------------------------------- */
+@-webkit-keyframes scale-up-ver-bottom {
+    0% {
+        -webkit-transform: scaleY(0.4);
+                transform: scaleY(0.4);
+        -webkit-transform-origin: 0% 100%;
+                transform-origin: 0% 100%;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+        -webkit-transform-origin: 0% 100%;
+                transform-origin: 0% 100%;
+    }
+}
+@keyframes scale-up-ver-bottom {
+    0% {
+        -webkit-transform: scaleY(0.4);
+                transform: scaleY(0.4);
+        -webkit-transform-origin: 0% 100%;
+                transform-origin: 0% 100%;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+        -webkit-transform-origin: 0% 100%;
+                transform-origin: 0% 100%;
+    }
+}
