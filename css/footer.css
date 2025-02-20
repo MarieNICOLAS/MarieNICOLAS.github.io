@@ -1,0 +1,26 @@
+/* 🔻 FOOTER */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    font-size: 10px;
+    color: rgb(59, 16, 100);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Icônes dans le footer */
+footer a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+footer a img:hover {
+    transform: scale(1.2);
+}
